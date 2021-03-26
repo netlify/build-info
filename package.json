@@ -1,7 +1,6 @@
 {
   "name": "@netlify/build-info",
-  "private": true,
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Build info utility",
   "files": [
     "src/**/*.js",
