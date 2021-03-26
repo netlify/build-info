@@ -3,7 +3,7 @@ const { cwd } = require('process')
 
 const readPkg = require('read-pkg')
 
-const getPackageJson = async (dir) => {
+const getPackageJson = async function (dir) {
   try {
     const packageJson = await readPkg({ cwd: dir, normalize: false })
     if (packageJson === undefined) {
@@ -16,9 +16,9 @@ const getPackageJson = async (dir) => {
   }
 }
 
-const getContext = async ({ projectDir, rootDir } = {}) => {
+const getContext = async function ({ projectDir = cwd(), rootDir } = {}) {
   // Get the absolute dirs for both project and root
-  const absoluteProjectDir = projectDir ? resolve(cwd(), projectDir) : cwd()
+  const absoluteProjectDir = resolve(cwd(), projectDir)
   const absoluteRootDir = rootDir ? resolve(cwd(), rootDir) : undefined
 
   // We only pass through the root dir if it was provided and is actually different
