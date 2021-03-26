@@ -55,5 +55,9 @@
   },
   "engines": {
     "node": ">=8.3.0"
+  },
+  "dependencies": {
+    "@npmcli/map-workspaces": "^1.0.3",
+    "read-pkg": "^5.2.0"
   }
 }

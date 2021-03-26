@@ -1,7 +1,11 @@
 'use strict'
 
-const mainFunction = function () {
-  return true
+const { getContext } = require('./context')
+const { buildInfo } = require('./core')
+
+const getBuildInfo = async function (opts) {
+  const context = await getContext(opts)
+  return await buildInfo(context)
 }
 
-module.exports = { mainFunction }
+module.exports = { getBuildInfo }
