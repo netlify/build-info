@@ -4,7 +4,7 @@ const mapWorkspaces = require('@npmcli/map-workspaces')
 
 const getWorkspaceInfo = async function ({ rootPackageJson, projectDir, rootDir }) {
   if (!rootPackageJson.workspaces) {
-    return {}
+    return
   }
 
   const workspacesMap = await mapWorkspaces({
@@ -20,14 +20,14 @@ const getWorkspaceInfo = async function ({ rootPackageJson, projectDir, rootDir 
   const isRoot = !rootDir
 
   if (isWorkspace || isRoot) {
-    return { jsWorkspaces: { isRoot, packages } }
+    return { isRoot, packages }
   }
-
-  return {}
 }
 
 const buildInfo = async function (context) {
-  return await getWorkspaceInfo(context)
+  const workspaceInfo = await getWorkspaceInfo(context)
+  const jsWorkspaces = workspaceInfo ? { jsWorkspaces: workspaceInfo } : {}
+  return { ...jsWorkspaces }
 }
 
 module.exports = { buildInfo }
