@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Build info utility",
   "bin": {
-    "framework-info": "./src/bin.js"
+    "build-info": "./src/bin.js"
   },
   "files": [
     "src/**/*.js",
