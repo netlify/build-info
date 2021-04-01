@@ -2,6 +2,9 @@
   "name": "@netlify/build-info",
   "version": "1.0.0",
   "description": "Build info utility",
+  "bin": {
+    "framework-info": "./src/bin.js"
+  },
   "files": [
     "src/**/*.js",
     "!src/**/*.test.js"
