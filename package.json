@@ -63,7 +63,7 @@
   },
   "dependencies": {
     "@npmcli/map-workspaces": "^1.0.3",
-    "read-pkg": "^5.2.0",
+    "read-pkg": "^6.0.0",
     "yargs": "^15.4.1"
   }
 }
