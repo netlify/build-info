@@ -21,6 +21,15 @@ test('context: given a relative projectDir and a rootDir, resolve projectDir fro
   t.deepEqual(rootPackageJson, {})
 })
 
+test('context: given an empty projectDir and a rootDir, resolve projectDir to rootDir', async (t) => {
+  const argRootDir = '/root/dir'
+  const argProjectDir = ''
+  const { projectDir, rootDir, rootPackageJson } = await getContext({ projectDir: argProjectDir, rootDir: argRootDir })
+  t.is(projectDir, argRootDir)
+  t.is(rootDir, undefined)
+  t.deepEqual(rootPackageJson, {})
+})
+
 test('context: given a relative rootDir resolve from cwd', async (t) => {
   const argRootDir = 'root'
   const argProjectDir = 'some/relative/path'
@@ -44,14 +53,13 @@ test('context: extract the rootPackageJson if there is one within rootDir', asyn
     rootDir: `${FIXTURES_RELATIVE_PATH}/js-workspaces`,
     projectDir: 'packages/package-1',
   })
-  t.notDeepEqual(rootPackageJson, {})
   t.is(rootPackageJson.name, 'js-workspaces')
 })
 
 test('context: extract the rootPackageJson from projectDir if no rootDir is provided', async (t) => {
-  const { rootPackageJson } = await getContext({
+  const { rootPackageJson, rootDir } = await getContext({
     projectDir: `${FIXTURES_RELATIVE_PATH}/js-workspaces/packages/package-1`,
   })
-  t.notDeepEqual(rootPackageJson, {})
+  t.is(rootDir, undefined)
   t.is(rootPackageJson.name, 'package-1')
 })
