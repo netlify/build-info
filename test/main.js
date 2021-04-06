@@ -30,9 +30,8 @@ test('js-workspaces: projectDir set to workspaces root returns workspace info an
   t.is(jsWorkspaces.packages.length, 2)
 })
 
-test('js-workspaces: detects rootDir is the same as the projectDir and sets the isRoot flag to true', async (t) => {
+test('js-workspaces: returns workspace info and sets the isRoot flag to true', async (t) => {
   const { jsWorkspaces } = await getBuildInfo({
-    rootDir: `${FIXTURES_ABSOLUTE_PATH}/js-workspaces`,
     projectDir: `${FIXTURES_RELATIVE_PATH}/js-workspaces`,
   })
   t.not(jsWorkspaces, undefined)
@@ -43,7 +42,7 @@ test('js-workspaces: detects rootDir is the same as the projectDir and sets the 
 test('js-workspaces: projectDir set to workspace dir returns workspace info and isRoot flag set to false', async (t) => {
   const { jsWorkspaces } = await getBuildInfo({
     rootDir: `${FIXTURES_RELATIVE_PATH}/js-workspaces`,
-    projectDir: `${FIXTURES_RELATIVE_PATH}/js-workspaces/packages/package-1`,
+    projectDir: 'packages/package-1',
   })
   t.not(jsWorkspaces, undefined)
   t.false(jsWorkspaces.isRoot)
@@ -53,7 +52,7 @@ test('js-workspaces: projectDir set to workspace dir returns workspace info and 
 test('js-workspaces: if project is not part of a workspace return no workspace info', async (t) => {
   const { jsWorkspaces } = await getBuildInfo({
     rootDir: `${FIXTURES_RELATIVE_PATH}/js-workspaces`,
-    projectDir: `${FIXTURES_RELATIVE_PATH}/js-workspaces/not-in-workspace`,
+    projectDir: 'not-in-workspace',
   })
   t.is(jsWorkspaces, undefined)
 })
