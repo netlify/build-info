@@ -16,9 +16,11 @@ const getPackageJson = async function (dir) {
   }
 }
 
-const getContext = async function ({ projectDir = cwd(), rootDir } = {}) {
+const getContext = async function ({ projectDir = cwd(), rootDir = '' } = {}) {
   // Get the absolute dirs for both project and root
-  const absoluteProjectDir = resolve(cwd(), projectDir)
+  // We resolve the projectDir from the rootDir
+  const absoluteProjectDir = resolve(rootDir, projectDir)
+  // If a relative absolute path is given we rely on cwd
   const absoluteRootDir = rootDir ? resolve(cwd(), rootDir) : undefined
 
   // We only pass through the root dir if it was provided and is actually different
