@@ -12,31 +12,33 @@ easily extend it to detected other things such as package managers used, or othe
 
 # Example (Node.js)
 ```js
-const { getBuildInfo } = require('@netlify/build-info')
+const { getBuildInfo } = require('./src/main')
 
-console.log(await getBuildInfo({ projectDir: 'path/to/site', rootDir: '/project/root/dir' }))
-// {
-//   jsWorkspaces: {
-//     isRoot: false,
-//     packages: [
-//       'path/to/site',
-//       'path/to/component/library'
-//       'path/to/utility/library'
-//     ]
-//   }
-// }
+(async () => {
+  console.log(await getBuildInfo({ projectDir: 'path/to/site', rootDir: '/project/root/dir' }))
+  // {
+  //   jsWorkspaces: {
+  //     isRoot: false,
+  //     packages: [
+  //       'path/to/site',
+  //       'path/to/component/library'
+  //       'path/to/utility/library'
+  //     ]
+  //   }
+  // }
 
-console.log(await getBuildInfo({ projectDir: '/project/root/dir' }))
-// {
-//   jsWorkspaces: {
-//     isRoot: true,
-//     packages: [
-//       'path/to/site',
-//       'path/to/component/library'
-//       'path/to/utility/library'
-//     ]
-//   }
-// }
+  console.log(await getBuildInfo({ projectDir: '/project/root/dir' }))
+  // {
+  //   jsWorkspaces: {
+  //     isRoot: true,
+  //     packages: [
+  //       'path/to/site',
+  //       'path/to/component/library'
+  //       'path/to/utility/library'
+  //     ]
+  //   }
+  // }
+})();
 ```
 
 # Example (CLI)
