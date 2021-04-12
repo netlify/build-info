@@ -30,19 +30,10 @@ test('js-workspaces: projectDir set to workspaces root returns workspace info an
   t.is(jsWorkspaces.packages.length, 2)
 })
 
-test('js-workspaces: returns workspace info and sets the isRoot flag to true', async (t) => {
-  const { jsWorkspaces } = await getBuildInfo({
-    projectDir: `${FIXTURES_RELATIVE_PATH}/js-workspaces`,
-  })
-  t.not(jsWorkspaces, undefined)
-  t.true(jsWorkspaces.isRoot)
-  t.is(jsWorkspaces.packages.length, 2)
-})
-
 test('js-workspaces: projectDir set to workspace dir returns workspace info and isRoot flag set to false', async (t) => {
   const { jsWorkspaces } = await getBuildInfo({
     rootDir: `${FIXTURES_RELATIVE_PATH}/js-workspaces`,
-    projectDir: 'packages/package-1',
+    projectDir: 'packages/gatsby-site',
   })
   t.not(jsWorkspaces, undefined)
   t.false(jsWorkspaces.isRoot)
@@ -60,9 +51,34 @@ test('js-workspaces: if project is not part of a workspace return no workspace i
 test('js-workspaces: handles absolute paths correctly', async (t) => {
   const { jsWorkspaces } = await getBuildInfo({
     rootDir: `${FIXTURES_ABSOLUTE_PATH}/js-workspaces`,
-    projectDir: `${FIXTURES_ABSOLUTE_PATH}/js-workspaces/packages/package-1`,
+    projectDir: `${FIXTURES_ABSOLUTE_PATH}/js-workspaces/packages/gatsby-site`,
   })
   t.not(jsWorkspaces, undefined)
   t.false(jsWorkspaces.isRoot)
   t.is(jsWorkspaces.packages.length, 2)
+})
+
+test('frameworks: return an empty array if no frameworks are detected', async (t) => {
+  const { frameworks } = await getBuildInfo({
+    rootDir: `${FIXTURES_ABSOLUTE_PATH}/empty`,
+  })
+  t.deepEqual(frameworks, [])
+})
+
+test('all: should detect workspaces and frameworks', async (t) => {
+  const { frameworks, jsWorkspaces } = await getBuildInfo({
+    rootDir: `${FIXTURES_ABSOLUTE_PATH}/js-workspaces`,
+    projectDir: 'packages/gatsby-site',
+  })
+  t.not(jsWorkspaces, undefined)
+  t.is(frameworks.length, 1)
+})
+
+test('all: detects workspaces and frameworks when given a rootDir and an empty projectDir', async (t) => {
+  const { frameworks, jsWorkspaces } = await getBuildInfo({
+    rootDir: `${FIXTURES_ABSOLUTE_PATH}/js-workspaces`,
+    projectDir: '',
+  })
+  t.not(jsWorkspaces, undefined)
+  t.is(frameworks.length, 1)
 })
