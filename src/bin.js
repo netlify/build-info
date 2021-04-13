@@ -25,7 +25,6 @@ const parseArgs = function () {
 const OPTIONS = {
   rootDir: {
     string: true,
-    default: false,
     describe: `The root directory of the project if different from projectDir`,
   },
 }
