@@ -52,15 +52,15 @@ test('context: given absolute dirs rely on them', async (t) => {
 test('context: extract the rootPackageJson if there is one within rootDir', async (t) => {
   const { rootPackageJson } = await getContext({
     rootDir: `${FIXTURES_RELATIVE_PATH}/js-workspaces`,
-    projectDir: 'packages/package-1',
+    projectDir: 'packages/package-2',
   })
   t.is(rootPackageJson.name, 'js-workspaces')
 })
 
 test('context: extract the rootPackageJson from projectDir if no rootDir is provided', async (t) => {
   const { rootPackageJson, rootDir } = await getContext({
-    projectDir: `${FIXTURES_RELATIVE_PATH}/js-workspaces/packages/package-1`,
+    projectDir: `${FIXTURES_RELATIVE_PATH}/js-workspaces/packages/package-2`,
   })
   t.is(rootDir, undefined)
-  t.is(rootPackageJson.name, 'package-1')
+  t.is(rootPackageJson.name, 'simple-package-json')
 })
