@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://www.github.com/netlify/build-info/compare/v1.1.1...v1.2.0) (2021-04-13)
+
+
+### Features
+
+* include framework info ([#35](https://www.github.com/netlify/build-info/issues/35)) ([ffbb6ee](https://www.github.com/netlify/build-info/commit/ffbb6ee236345bd158b4a1a3386ad99eeb5b562d))
+
+
+### Bug Fixes
+
+* **bin:** remove cli rootDir default setting ([#37](https://www.github.com/netlify/build-info/issues/37)) ([9da8022](https://www.github.com/netlify/build-info/commit/9da80226b7d5442cb69168939148c8aa3b77be94))
+
 ### [1.1.1](https://www.github.com/netlify/build-info/compare/v1.1.0...v1.1.1) (2021-04-07)
 
 
