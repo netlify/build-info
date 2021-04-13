@@ -1,11 +1,12 @@
-const { resolve } = require('path')
+const { relative } = require('path')
+const { cwd } = require('process')
 
 const test = require('ava')
 
 const { getBuildInfo } = require('../src/main')
 
-const FIXTURES_RELATIVE_PATH = `${__dirname}/fixtures`
-const FIXTURES_ABSOLUTE_PATH = resolve(FIXTURES_RELATIVE_PATH)
+const FIXTURES_ABSOLUTE_PATH = `${__dirname}/fixtures`
+const FIXTURES_RELATIVE_PATH = relative(cwd(), FIXTURES_ABSOLUTE_PATH)
 
 test('js-workspaces: project without package.json does not return workspaces info', async (t) => {
   const { jsWorkspaces } = await getBuildInfo({
