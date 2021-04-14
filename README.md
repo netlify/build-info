@@ -6,9 +6,12 @@
 Build information detection utility.
 
 The purpose of this lib is to, given a project and a configuration, return a set of useful data for our build system.
-Currently it's only used to detect [`workspaces`](https://docs.npmjs.com/cli/v7/using-npm/workspaces), however one can
-easily extend it to detected other things such as package managers used, or other pieces of info not given by
-[@netlify/framework-info](https://github.com/netlify/framework-info) and most likely only kept within [`build-image`](https://github.com/netlify/build-image/blob/xenial/run-build-functions.sh#L214).
+Currently it's used to detect:
+- [`jsWorkspaces`](https://docs.npmjs.com/cli/v7/using-npm/workspaces)
+- [`frameworks`](https://github.com/netlify/framework-info)
+
+But it's possible to extend it in the future to extract other bits of information, such as the heuristics present in the
+[`build-image`](https://github.com/netlify/build-image/blob/xenial/run-build-functions.sh#L214).
 
 # Example (Node.js)
 ```js
@@ -24,7 +27,23 @@ const { getBuildInfo } = require('./src/main')
   //       'path/to/component/library'
   //       'path/to/utility/library'
   //     ]
-  //   }
+  //   },
+  //   frameworks: [
+  //     {
+  //        name: 'gatsby',
+  //        category: 'static_site_generator',
+  //        dev: {
+  //          commands: ['gatsby develop'],
+  //          port: 8000
+  //        },
+  //        build: {
+  //          commands: ['gatsby build'],
+  //          directory: 'public'
+  //        },
+  //        env: { GATSBY_LOGGER: 'yurnalist' },
+  //        plugins: []
+  //      }
+  //    ]
   // }
 
   console.log(await getBuildInfo({ projectDir: '/project/root/dir' }))
@@ -36,7 +55,8 @@ const { getBuildInfo } = require('./src/main')
   //       'path/to/component/library'
   //       'path/to/utility/library'
   //     ]
-  //   }
+  //   },
+  //   frameworks: []
   // }
 })();
 ```
@@ -53,7 +73,8 @@ $ build-info /project/root/dir
       'path/to/component/library'
       'path/to/utility/library'
     ]
-  }
+  },
+  frameworks: []
 }
 
 $ build-info path/to/site --rootDir /project/root/dir
@@ -65,7 +86,23 @@ $ build-info path/to/site --rootDir /project/root/dir
       'path/to/component/library'
       'path/to/utility/library'
     ]
-  }
+  },
+  frameworks: [
+    {
+       name: 'gatsby',
+       category: 'static_site_generator',
+       dev: {
+         commands: ['gatsby develop'],
+         port: 8000
+       },
+       build: {
+         commands: ['gatsby build'],
+         directory: 'public'
+       },
+       env: { GATSBY_LOGGER: 'yurnalist' },
+       plugins: []
+     }
+  ]
 }
 ```
 
