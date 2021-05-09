@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.2](https://www.github.com/netlify/build-info/compare/v1.2.1...v1.2.2) (2021-05-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @netlify/framework-info to ^4.0.1 ([#48](https://www.github.com/netlify/build-info/issues/48)) ([b24c5d7](https://www.github.com/netlify/build-info/commit/b24c5d7634c5ca38717e9d5f4a42b7cc3c19bb5b))
+
 ### [1.2.1](https://www.github.com/netlify/build-info/compare/v1.2.0...v1.2.1) (2021-04-27)
 
 
