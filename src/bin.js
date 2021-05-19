@@ -3,7 +3,7 @@ const { exit } = require('process')
 
 const yargs = require('yargs')
 
-const { getBuildInfo } = require('./main.js')
+const { getBuildInfo } = require('./main')
 
 // CLI entry point
 const runCli = async function () {
