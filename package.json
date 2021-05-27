@@ -63,7 +63,7 @@
     "nyc": "^15.0.0"
   },
   "engines": {
-    "node": ">=8.3.0"
+    "node": ">=10.18.0"
   },
   "dependencies": {
     "@netlify/framework-info": "^4.1.0",
