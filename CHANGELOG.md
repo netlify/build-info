@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://www.github.com/netlify/build-info/compare/v1.2.3...v2.0.0) (2021-05-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop support for Node.js 8 (#66)
+
+### Miscellaneous Chores
+
+* drop support for Node.js 8 ([#66](https://www.github.com/netlify/build-info/issues/66)) ([9259b05](https://www.github.com/netlify/build-info/commit/9259b05775c58df86637b89b5e4b304a54a81133))
+
 ### [1.2.3](https://www.github.com/netlify/build-info/compare/v1.2.2...v1.2.3) (2021-05-11)
 
 
