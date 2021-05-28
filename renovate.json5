@@ -4,11 +4,4 @@
   semanticCommits: true,
   dependencyDashboard: true,
   automerge: true,
-  packageRules: [
-    {
-      major: {
-        enabled: false,
-      },
-    },
-  ],
 }
