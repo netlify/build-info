@@ -6,7 +6,6 @@
 ### Bug Fixes
 
 * **deps:** update dependency @netlify/framework-info to ^5.1.0 ([#73](https://www.github.com/netlify/build-info/issues/73)) ([f4d6039](https://www.github.com/netlify/build-info/commit/f4d60397148d2d7d3620f478bfff67de9687c8f7))
-* **renovate:** config has unused packageRules ([#70](https://www.github.com/netlify/build-info/issues/70)) ([811fce0](https://www.github.com/netlify/build-info/commit/811fce0cbd9dc5bcc3a0bdeea571332ed782d1ac))
 
 ### [2.0.1](https://www.github.com/netlify/build-info/compare/v2.0.0...v2.0.1) (2021-05-27)
 
