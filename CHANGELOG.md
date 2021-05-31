@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.3](https://www.github.com/netlify/build-info/compare/v2.0.2...v2.0.3) (2021-05-31)
+
+
+### Bug Fixes
+
+* **deps:** update dependency yargs to v16 ([#82](https://www.github.com/netlify/build-info/issues/82)) ([b1a0682](https://www.github.com/netlify/build-info/commit/b1a068239f9efa6c9c9efcc0db5fc448a3759aab))
+
 ### [2.0.2](https://www.github.com/netlify/build-info/compare/v2.0.1...v2.0.2) (2021-05-30)
 
 
