@@ -1,5 +1,16 @@
 # Changelog
 
+### [2.0.16](https://www.github.com/netlify/build-info/compare/v2.0.15...v2.0.16) (2021-08-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @netlify/framework-info to ^5.7.3 ([#135](https://www.github.com/netlify/build-info/issues/135)) ([de04907](https://www.github.com/netlify/build-info/commit/de04907e3f5a3533b0ab127b88abad2f4482b099))
+* **deps:** update dependency @netlify/framework-info to ^5.8.0 ([#137](https://www.github.com/netlify/build-info/issues/137)) ([a22028d](https://www.github.com/netlify/build-info/commit/a22028d536f6f223a08327018bebc77a87c5b914))
+* **deps:** update dependency @netlify/framework-info to ^5.9.0 ([#145](https://www.github.com/netlify/build-info/issues/145)) ([8b3b681](https://www.github.com/netlify/build-info/commit/8b3b681b848233fb0b90e7a8c3a0ef340db55fde))
+* **deps:** update dependency @netlify/framework-info to ^5.9.1 ([#146](https://www.github.com/netlify/build-info/issues/146)) ([e21ff52](https://www.github.com/netlify/build-info/commit/e21ff52e4b33bbb9106c2878ee27c27a20a74521))
+* **deps:** update dependency @npmcli/map-workspaces to v1.0.4 ([#142](https://www.github.com/netlify/build-info/issues/142)) ([a72d70e](https://www.github.com/netlify/build-info/commit/a72d70e8e2b1c58ee15b0abc05c3182b02fe024e))
+
 ### [2.0.15](https://www.github.com/netlify/build-info/compare/v2.0.14...v2.0.15) (2021-07-19)
 
 
