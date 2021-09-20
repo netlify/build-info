@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.17](https://www.github.com/netlify/build-info/compare/v2.0.16...v2.0.17) (2021-09-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @netlify/framework-info to ^5.9.2 ([#163](https://www.github.com/netlify/build-info/issues/163)) ([f19297c](https://www.github.com/netlify/build-info/commit/f19297c2b38a84b233f1fbee5cd3e7016573dfe4))
+
 ### [2.0.16](https://www.github.com/netlify/build-info/compare/v2.0.15...v2.0.16) (2021-08-18)
 
 
