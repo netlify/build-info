@@ -67,7 +67,7 @@
   },
   "dependencies": {
     "@netlify/framework-info": "^5.11.0",
-    "@npmcli/map-workspaces": "^1.0.3",
+    "@npmcli/map-workspaces": "^2.0.0",
     "read-pkg": "^5.2.0",
     "yargs": "^16.0.0"
   }
