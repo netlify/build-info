@@ -1,5 +1,12 @@
 # Changelog
 
+### [3.0.1](https://www.github.com/netlify/build-info/compare/v3.0.0...v3.0.1) (2021-11-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @netlify/framework-info to v6 ([#206](https://www.github.com/netlify/build-info/issues/206)) ([09d9005](https://www.github.com/netlify/build-info/commit/09d9005c0749764aa31bd7f4812994e54a310ba6))
+
 ## [3.0.0](https://www.github.com/netlify/build-info/compare/v2.0.18...v3.0.0) (2021-11-24)
 
 
