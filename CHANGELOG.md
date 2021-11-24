@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://www.github.com/netlify/build-info/compare/v2.0.18...v3.0.0) (2021-11-24)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop support for Node 10 (#204)
+
+### Miscellaneous Chores
+
+* drop support for Node 10 ([#204](https://www.github.com/netlify/build-info/issues/204)) ([637f1f7](https://www.github.com/netlify/build-info/commit/637f1f7d45eca1cffbf94dd3e76314f004a9e0b3))
+
 ### [2.0.18](https://www.github.com/netlify/build-info/compare/v2.0.17...v2.0.18) (2021-10-11)
 
 
