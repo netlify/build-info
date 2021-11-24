@@ -4,15 +4,5 @@
   semanticCommits: true,
   dependencyDashboard: true,
   automerge: true,
-  // Those cannot be upgraded until we drop support for Node 10
-  packageRules: [
-    {
-      matchPackageNames: ['yargs'],
-      allowedVersions: '<17',
-    },
-    {
-      matchPackageNames: ['read-pkg'],
-      allowedVersions: '<6',
-    },
-  ],
+  packageRules: [],
 }
