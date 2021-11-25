@@ -1,9 +1,10 @@
 #!/usr/bin/env node
-const { exit } = require('process')
+import { exit, argv } from 'process'
 
-const yargs = require('yargs')
+import yargs from 'yargs'
+import { hideBin } from 'yargs/helpers'
 
-const { getBuildInfo } = require('./main')
+import { getBuildInfo } from './main.js'
 
 // CLI entry point
 const runCli = async function () {
@@ -19,7 +20,7 @@ const runCli = async function () {
 }
 
 const parseArgs = function () {
-  return yargs.command('* [projectDir]').options(OPTIONS).usage(USAGE).strict().parse()
+  return yargs(hideBin(argv)).command('* [projectDir]').options(OPTIONS).usage(USAGE).strict().parse()
 }
 
 const OPTIONS = {

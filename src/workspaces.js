@@ -1,8 +1,8 @@
 'use strict'
 
-const mapWorkspaces = require('@npmcli/map-workspaces')
+import mapWorkspaces from '@npmcli/map-workspaces'
 
-const getWorkspaceInfo = async function ({ rootPackageJson, projectDir, rootDir }) {
+export const getWorkspaceInfo = async function ({ rootPackageJson, projectDir, rootDir }) {
   if (!rootPackageJson.workspaces) {
     return
   }
@@ -23,5 +23,3 @@ const getWorkspaceInfo = async function ({ rootPackageJson, projectDir, rootDir 
     return { isRoot, packages }
   }
 }
-
-module.exports = { getWorkspaceInfo }

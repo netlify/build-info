@@ -1,11 +1,9 @@
 'use strict'
 
-const { getContext } = require('./context')
-const { buildInfo } = require('./core')
+import { getContext } from './context.js'
+import { buildInfo } from './core.js'
 
-const getBuildInfo = async function (opts) {
+export const getBuildInfo = async function (opts) {
   const context = await getContext(opts)
   return await buildInfo(context)
 }
-
-module.exports = { getBuildInfo }

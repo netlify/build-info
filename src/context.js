@@ -1,7 +1,7 @@
-const { resolve } = require('path')
-const { cwd } = require('process')
+import { resolve } from 'path'
+import { cwd } from 'process'
 
-const readPkg = require('read-pkg')
+import readPkg from 'read-pkg'
 
 const getPackageJson = async function (dir) {
   try {
@@ -16,7 +16,7 @@ const getPackageJson = async function (dir) {
   }
 }
 
-const getContext = async function ({ projectDir = cwd(), rootDir = '' } = {}) {
+export const getContext = async function ({ projectDir = cwd(), rootDir = '' } = {}) {
   // Get the absolute dirs for both project and root
   // We resolve the projectDir from the rootDir
   const absoluteProjectDir = resolve(rootDir, projectDir)
@@ -37,5 +37,3 @@ const getContext = async function ({ projectDir = cwd(), rootDir = '' } = {}) {
     rootPackageJson,
   }
 }
-
-module.exports = { getContext }

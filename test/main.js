@@ -1,11 +1,12 @@
-const { relative } = require('path')
-const { cwd } = require('process')
+import { relative } from 'path'
+import { cwd } from 'process'
+import { fileURLToPath } from 'url'
 
-const test = require('ava')
+import test from 'ava'
 
-const { getBuildInfo } = require('../src/main')
+import { getBuildInfo } from '../src/main.js'
 
-const FIXTURES_ABSOLUTE_PATH = `${__dirname}/fixtures`
+const FIXTURES_ABSOLUTE_PATH = fileURLToPath(new URL('fixtures', import.meta.url))
 const FIXTURES_RELATIVE_PATH = relative(cwd(), FIXTURES_ABSOLUTE_PATH)
 
 test('js-workspaces: project without package.json does not return workspaces info', async (t) => {
