@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.0.0](https://www.github.com/netlify/build-info/compare/v3.0.1...v4.0.0) (2021-11-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* use pure ES modules (#208)
+
+### Miscellaneous Chores
+
+* use pure ES modules ([#208](https://www.github.com/netlify/build-info/issues/208)) ([36fad7c](https://www.github.com/netlify/build-info/commit/36fad7ce68bacda5741f6c20a40675fde736a595))
+
 ### [3.0.1](https://www.github.com/netlify/build-info/compare/v3.0.0...v3.0.1) (2021-11-24)
 
 
