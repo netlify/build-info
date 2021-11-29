@@ -1,11 +1,12 @@
-const { relative } = require('path')
-const { cwd } = require('process')
+import { relative } from 'path'
+import { cwd } from 'process'
+import { fileURLToPath } from 'url'
 
-const test = require('ava')
-const execa = require('execa')
-const { getBinPath } = require('get-bin-path')
+import test from 'ava'
+import execa from 'execa'
+import { getBinPath } from 'get-bin-path'
 
-const FIXTURES_ABSOLUTE_PATH = `${__dirname}/fixtures`
+const FIXTURES_ABSOLUTE_PATH = fileURLToPath(new URL('fixtures', import.meta.url))
 const FIXTURES_RELATIVE_PATH = relative(cwd(), FIXTURES_ABSOLUTE_PATH)
 
 const BINARY_PATH = getBinPath()

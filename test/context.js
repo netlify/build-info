@@ -1,11 +1,12 @@
-const { resolve } = require('path')
-const { cwd } = require('process')
+import { resolve } from 'path'
+import { cwd } from 'process'
+import { fileURLToPath } from 'url'
 
-const test = require('ava')
+import test from 'ava'
 
-const { getContext } = require('../src/context')
+import { getContext } from '../src/context.js'
 
-const FIXTURES_RELATIVE_PATH = `${__dirname}/fixtures`
+const FIXTURES_ABSOLUTE_PATH = fileURLToPath(new URL('fixtures', import.meta.url))
 
 test('context: if no options are provided set projectDir to cwd', async (t) => {
   const { projectDir, rootDir } = await getContext()
@@ -51,7 +52,7 @@ test('context: given absolute dirs rely on them', async (t) => {
 
 test('context: extract the rootPackageJson if there is one within rootDir', async (t) => {
   const { rootPackageJson } = await getContext({
-    rootDir: `${FIXTURES_RELATIVE_PATH}/js-workspaces`,
+    rootDir: `${FIXTURES_ABSOLUTE_PATH}/js-workspaces`,
     projectDir: 'packages/package-2',
   })
   t.is(rootPackageJson.name, 'js-workspaces')
@@ -59,7 +60,7 @@ test('context: extract the rootPackageJson if there is one within rootDir', asyn
 
 test('context: extract the rootPackageJson from projectDir if no rootDir is provided', async (t) => {
   const { rootPackageJson, rootDir } = await getContext({
-    projectDir: `${FIXTURES_RELATIVE_PATH}/js-workspaces/packages/package-2`,
+    projectDir: `${FIXTURES_ABSOLUTE_PATH}/js-workspaces/packages/package-2`,
   })
   t.is(rootDir, undefined)
   t.is(rootPackageJson.name, 'simple-package-json')
