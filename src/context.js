@@ -11,7 +11,7 @@ const getPackageJson = async function (dir) {
     }
 
     return packageJson
-  } catch (error) {
+  } catch {
     return {}
   }
 }
