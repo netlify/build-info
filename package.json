@@ -26,7 +26,7 @@
     "test:dev": "run-s test:dev:*",
     "test:ci": "run-s test:ci:*",
     "test:dev:ava": "ava",
-    "test:ci:ava": "nyc -r lcovonly -r text -r json ava"
+    "test:ci:ava": "c8 -r lcovonly -r text -r json ava"
   },
   "config": {
     "eslint": "--ignore-path .gitignore --cache --format=codeframe --max-warnings=0 \"{src,scripts,.github}/**/*.{cjs,mjs,js,md,html}\" \"*.{cjs,mjs,js,md,html}\" \".*.{cjs,mjs,js,md,html}\"",
@@ -54,23 +54,20 @@
   "directories": {
     "test": "test"
   },
-  "devDependencies": {
-    "@commitlint/cli": "^16.0.0",
-    "@commitlint/config-conventional": "^16.0.0",
-    "@netlify/eslint-config-node": "^4.1.0",
-    "ava": "^3.0.0",
-    "execa": "^5.0.0",
-    "get-bin-path": "^5.0.0",
-    "husky": "^4.3.8",
-    "nyc": "^15.0.0"
-  },
-  "engines": {
-    "node": "^12.20.0 || ^14.14.0 || >=16.0.0"
-  },
   "dependencies": {
     "@netlify/framework-info": "^8.0.0",
     "@npmcli/map-workspaces": "^1.0.3",
     "read-pkg": "^5.2.0",
     "yargs": "^17.0.0"
+  },
+  "devDependencies": {
+    "@netlify/eslint-config-node": "^4.1.0",
+    "ava": "^3.0.0",
+    "c8": "^7.11.0",
+    "execa": "^5.0.0",
+    "get-bin-path": "^5.0.0"
+  },
+  "engines": {
+    "node": "^12.20.0 || ^14.14.0 || >=16.0.0"
   }
 }
