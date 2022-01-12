@@ -1,5 +1,12 @@
 # Changelog
 
+### [4.0.4](https://github.com/netlify/build-info/compare/v4.0.3...v4.0.4) (2022-01-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @netlify/framework-info to ^8.0.1 ([#299](https://github.com/netlify/build-info/issues/299)) ([13e65ed](https://github.com/netlify/build-info/commit/13e65edd0e428f1cb26b065cf0483a8d9b41840e))
+
 ### [4.0.3](https://github.com/netlify/build-info/compare/v4.0.2...v4.0.3) (2022-01-10)
 
 
