@@ -1,5 +1,12 @@
 # Changelog
 
+### [4.0.5](https://github.com/netlify/build-info/compare/v4.0.4...v4.0.5) (2022-01-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @npmcli/map-workspaces to v2 ([#301](https://github.com/netlify/build-info/issues/301)) ([9a6c9a0](https://github.com/netlify/build-info/commit/9a6c9a00257c95d89f96d4abb99e4678f3349ddb))
+
 ### [4.0.4](https://github.com/netlify/build-info/compare/v4.0.3...v4.0.4) (2022-01-12)
 
 
