@@ -13,6 +13,7 @@
     "!src/**/*.test.js"
   ],
   "scripts": {
+    "prepare": "husky install node_modules/@netlify/eslint-config-node/.husky/",
     "prepublishOnly": "npm ci && npm test",
     "test": "run-s format test:dev",
     "format": "run-s format:check-fix:*",
@@ -38,12 +39,6 @@
       "!test/fixtures/**/*"
     ]
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "npm run format"
-    }
-  },
   "keywords": [],
   "license": "MIT",
   "repository": "netlify/build-info",
@@ -65,7 +60,8 @@
     "ava": "^4.0.0",
     "c8": "^7.11.0",
     "execa": "^5.0.0",
-    "get-bin-path": "^5.0.0"
+    "get-bin-path": "^5.0.0",
+    "husky": "^7.0.4"
   },
   "engines": {
     "node": "^12.20.0 || ^14.14.0 || >=16.0.0"
