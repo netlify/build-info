@@ -3,7 +3,7 @@ import { cwd } from 'process'
 import { fileURLToPath } from 'url'
 
 import test from 'ava'
-import execa from 'execa'
+import { execa } from 'execa'
 import { getBinPath } from 'get-bin-path'
 
 const FIXTURES_ABSOLUTE_PATH = fileURLToPath(new URL('fixtures', import.meta.url))
