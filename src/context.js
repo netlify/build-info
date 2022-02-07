@@ -1,11 +1,11 @@
 import { resolve } from 'path'
 import { cwd } from 'process'
 
-import readPkg from 'read-pkg'
+import { readPackage } from 'read-pkg'
 
 const getPackageJson = async function (dir) {
   try {
-    const packageJson = await readPkg({ cwd: dir, normalize: false })
+    const packageJson = await readPackage({ cwd: dir, normalize: false })
     if (packageJson === undefined) {
       return {}
     }
