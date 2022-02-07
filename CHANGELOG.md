@@ -1,5 +1,12 @@
 # Changelog
 
+### [4.0.8](https://github.com/netlify/build-info/compare/v4.0.7...v4.0.8) (2022-02-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency read-pkg to v7 ([#323](https://github.com/netlify/build-info/issues/323)) ([9929594](https://github.com/netlify/build-info/commit/99295941729a06fdd4e507b37bd82dc97729efb2))
+
 ### [4.0.7](https://github.com/netlify/build-info/compare/v4.0.6...v4.0.7) (2022-01-19)
 
 
