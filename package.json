@@ -52,7 +52,7 @@
   "dependencies": {
     "@netlify/framework-info": "^9.0.0",
     "@npmcli/map-workspaces": "^2.0.0",
-    "read-pkg": "^5.2.0",
+    "read-pkg": "^7.0.0",
     "yargs": "^17.0.0"
   },
   "devDependencies": {
