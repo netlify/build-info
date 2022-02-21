@@ -1,5 +1,13 @@
 # Changelog
 
+### [4.0.9](https://github.com/netlify/build-info/compare/v4.0.8...v4.0.9) (2022-02-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @npmcli/map-workspaces to v2.0.1 ([#330](https://github.com/netlify/build-info/issues/330)) ([85ab0d0](https://github.com/netlify/build-info/commit/85ab0d09c50a200e4792fa52b71e8846e8c70826))
+* **deps:** update dependency read-pkg to v7.1.0 ([#328](https://github.com/netlify/build-info/issues/328)) ([394b842](https://github.com/netlify/build-info/commit/394b842760d355292c67ca5114885c86e3a0dd11))
+
 ### [4.0.8](https://github.com/netlify/build-info/compare/v4.0.7...v4.0.8) (2022-02-07)
 
 
