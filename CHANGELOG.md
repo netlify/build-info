@@ -1,5 +1,21 @@
 # Changelog
 
+## [4.0.11](https://github.com/netlify/build-info/compare/v4.0.10...v4.0.11) (2022-10-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @netlify/framework-info to ^9.1.0 ([#356](https://github.com/netlify/build-info/issues/356)) ([eb3377b](https://github.com/netlify/build-info/commit/eb3377bac0784f70e094aed1f8630f45305b0763))
+* **deps:** update dependency @netlify/framework-info to ^9.1.1 ([#359](https://github.com/netlify/build-info/issues/359)) ([3b9c85e](https://github.com/netlify/build-info/commit/3b9c85e8f29372e8922212d95140e33fcfb4edfb))
+* **deps:** update dependency @netlify/framework-info to ^9.2.0 ([#363](https://github.com/netlify/build-info/issues/363)) ([c1cf3da](https://github.com/netlify/build-info/commit/c1cf3dae5eef81f128c14334090f46fe9ee2911f))
+* **deps:** update dependency @netlify/framework-info to ^9.3.0 ([#365](https://github.com/netlify/build-info/issues/365)) ([8bc1b0f](https://github.com/netlify/build-info/commit/8bc1b0ff6fcd3dac99abadfee702f9005a3ca606))
+* **deps:** update dependency @npmcli/map-workspaces to v2.0.2 ([#338](https://github.com/netlify/build-info/issues/338)) ([e5026e8](https://github.com/netlify/build-info/commit/e5026e85ddff571f388251a42d399cc1618ea7f9))
+* **deps:** update dependency @npmcli/map-workspaces to v2.0.3 ([#349](https://github.com/netlify/build-info/issues/349)) ([f114f90](https://github.com/netlify/build-info/commit/f114f90f532ec791ddbd5ba448a0fb00e12fc813))
+* **deps:** update dependency @npmcli/map-workspaces to v2.0.4 ([#362](https://github.com/netlify/build-info/issues/362)) ([5ae7328](https://github.com/netlify/build-info/commit/5ae7328ffb0a725406e2830118ab774c627a2020))
+* **deps:** update dependency yargs to v17.4.0 ([#340](https://github.com/netlify/build-info/issues/340)) ([95d4954](https://github.com/netlify/build-info/commit/95d495439b3f8fa31799490b416b503fd21ee88e))
+* **deps:** update dependency yargs to v17.4.1 ([#345](https://github.com/netlify/build-info/issues/345)) ([4ad7dd4](https://github.com/netlify/build-info/commit/4ad7dd43c7ecbb5bc7afe4f440177258da9250f8))
+* **deps:** update dependency yargs to v17.5.1 ([#352](https://github.com/netlify/build-info/issues/352)) ([150fe82](https://github.com/netlify/build-info/commit/150fe8218472e70b6e1760f08692f3b0bcea569d))
+
 ### [4.0.10](https://github.com/netlify/build-info/compare/v4.0.9...v4.0.10) (2022-02-21)
 
 
