@@ -1,5 +1,15 @@
 # Changelog
 
+### [4.0.11](https://github.com/netlify/build-info/compare/v4.0.10...v4.0.11) (2022-05-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @npmcli/map-workspaces to v2.0.2 ([#338](https://github.com/netlify/build-info/issues/338)) ([e5026e8](https://github.com/netlify/build-info/commit/e5026e85ddff571f388251a42d399cc1618ea7f9))
+* **deps:** update dependency @npmcli/map-workspaces to v2.0.3 ([#349](https://github.com/netlify/build-info/issues/349)) ([f114f90](https://github.com/netlify/build-info/commit/f114f90f532ec791ddbd5ba448a0fb00e12fc813))
+* **deps:** update dependency yargs to v17.4.0 ([#340](https://github.com/netlify/build-info/issues/340)) ([95d4954](https://github.com/netlify/build-info/commit/95d495439b3f8fa31799490b416b503fd21ee88e))
+* **deps:** update dependency yargs to v17.4.1 ([#345](https://github.com/netlify/build-info/issues/345)) ([4ad7dd4](https://github.com/netlify/build-info/commit/4ad7dd43c7ecbb5bc7afe4f440177258da9250f8))
+
 ### [4.0.10](https://github.com/netlify/build-info/compare/v4.0.9...v4.0.10) (2022-02-21)
 
 
